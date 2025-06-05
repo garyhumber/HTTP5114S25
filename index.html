@@ -9,13 +9,14 @@
 <body>
     <h1>Simple Counter App</h1>
     <p id="welcome">Welcome user</p>
+    <p>Hello</p>
     <input type="text" id="name" placeholder="Enter your name">
     <button id="greetBtn">Greet</button>
 
     <div class="counter">
         <h2>Counter: <span id="count">0</span></h2>
-        <button onclick="increase()">Increase</button>
-        <button onclick="decrease()">Decrease</button>
+        <button id="incrbutton" onclick="increase()">Increase</button>
+        <button id="descbutton" onclick="decrease()">Decrease</button>
         <button onclick="reset()">Reset</button>
     </div>
 
