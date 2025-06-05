@@ -14,19 +14,19 @@ function decrease() {
 }
 
 function reset() {
-    count == 0
+    count = 0
     updateCounter()
     console.log("Counter reset")
 }
 
 function updateCounter() {
-    document.getElementById('count').text = count
+    document.getElementById('count').innerText = count;
 }
 
 document.getElementById('greetBtn').addEventListener("click", function() {
     const name = document.getElementById("name").value
-    if(name = "") {
-        alert("Please enter your name")
+    if(name == "") {
+        alert("Please enter your name");
     } else {
         document.getElementById("welcome").innerText = "Welcome, " + name
     }
