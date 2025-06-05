@@ -14,13 +14,13 @@ function decrease() {
 }
 
 function reset() {
-    count == 0
+    count = 0
     updateCounter()
     console.log("Counter reset")
 }
 
-function updateCounter() {
-    document.getElementById('count').text = count
+function updateCounter(count) {
+     document.getElementById('count').text = count
 }
 
 document.getElementById('greetBtn').addEventListener("click", function() {
