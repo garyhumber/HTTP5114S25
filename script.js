@@ -14,6 +14,13 @@ function decrease() {
 }
 
 function reset() {
+    count = 0
+    updateCounter()
+    console.log("Counter reset")
+}
+
+function updateCounter() {
+    document.getElementById('count').innerText = count;
     count = 0;
     updateCounter();
     console.log("Counter reset");
