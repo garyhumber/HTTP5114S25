@@ -1,7 +1,6 @@
-
 body {
-    font-family: sans-serif
-    background-color: #fafafa;
+    font-family: sans-serif;
+    background-color: blueviolet;
     text-align: center
 }
 
@@ -10,6 +9,16 @@ body {
 }
 
 button {
-    margin: 5px
+    margin: 5px;
     padding: 10px 20px;
+}
+
+#incrbutton {
+    background-color: green;
+    font-weight: bold;
+}
+
+#descbutton {
+    background-color: red;
+    font-weight: bold;
 }

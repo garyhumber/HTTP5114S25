@@ -1,16 +1,16 @@
 
-let count = 0
+let count = 0;
 
 function increase() {
-    count = count + 1
-    updateCounter()
-    console.log("Counter increased")
+    count = count + 1;
+    updateCounter();
+    console.log("Counter increased");
 }
 
 function decrease() {
-    count = count - 1
-    updateCounter()
-    console.log("Counter decreased")
+    count = count - 1;
+    updateCounter();
+    console.log("Counter decreased");
 }
 
 function reset() {
@@ -21,6 +21,14 @@ function reset() {
 
 function updateCounter() {
     document.getElementById('count').innerText = count;
+    count = 0;
+    updateCounter();
+    console.log("Counter reset");
+
+}
+
+function updateCounter() {
+    document.getElementById('count').innerHTML = count;
 }
 
 document.getElementById('greetBtn').addEventListener("click", function() {
@@ -28,6 +36,6 @@ document.getElementById('greetBtn').addEventListener("click", function() {
     if(name == "") {
         alert("Please enter your name");
     } else {
-        document.getElementById("welcome").innerText = "Welcome, " + name
+        document.getElementById("welcome").innerHTML = "Welcome, " + name;
     }
 })
