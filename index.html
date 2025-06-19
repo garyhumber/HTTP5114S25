@@ -1,26 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Buggy Counter App</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Fixed Counter App</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Simple Counter App</h1>
-    <p id="welcome">Welcome user</p>
-    <p>Hello</p>
-    <input type="text" id="name" placeholder="Enter your name">
-    <button id="greetBtn">Greet</button>
+  <h1>Simple Counter App</h1>
 
-    <div class="counter">
-        <h2>Counter: <span id="count">0</span></h2>
-        <button id="incrbutton" onclick="increase()">Increase</button>
-        <button id="descbutton" onclick="decrease()">Decrease</button>
-        <button onclick="reset()">Reset</button>
-    </div>
+  <p id="welcome">Welcome user</p>
+  <label for="name">Enter your name:</label>
+  <input type="text" id="name" placeholder="Enter your name" aria-label="Name">
+  <button id="greetBtn">Greet</button>
 
-    <p>Check the console for logs</p>
-    <script src="script.js"></script>
+  <div class="counter">
+    <h2>Counter: <span id="count">0</span></h2>
+
+    <label for="step">Step&nbsp;(≥ 1):</label>
+    <input type="number" id="step" value="1" min="1">
+
+    <button id="incrbutton" onclick="increase()">Increase</button>
+    <button id="descbutton" onclick="decrease()">Decrease</button>
+    <button onclick="reset()">Reset</button>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </div>
+
+  <p>Open the browser console to see logs.</p>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,24 +1,35 @@
 body {
-    font-family: sans-serif;
-    background-color: blueviolet;
-    text-align: center
+  font-family: sans-serif;
+  background-color: #eee;
+  color: #000;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .counter {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 button {
-    margin: 5px;
-    padding: 10px 20px;
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
 }
 
 #incrbutton {
-    background-color: green;
-    font-weight: bold;
+  background-color: green;
+  color: #fff;
+  font-weight: bold;
 }
 
 #descbutton {
-    background-color: red;
-    font-weight: bold;
+  background-color: red;
+  color: #fff;
+  font-weight: bold;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #fff;
 }
