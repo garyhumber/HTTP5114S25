@@ -1,34 +1,56 @@
 
 let count = 0;
 
-function increase() {
-    count = count + 1;
+
+const updateCounter = () => {
+    document.getElementById('count').textContent = count;
+};
+
+
+const increase = () => {
+    const step = parseInt(document.getElementById("step")?.value) || 1;
+    count += step;
     updateCounter();
     console.log("Counter increased");
-}
+};
 
-function decrease() {
-    count = count - 1;
+
+const decrease = () => {
+    const step = parseInt(document.getElementById("step")?.value) || 1;
+    count -= step;
     updateCounter();
     console.log("Counter decreased");
-}
 
-function reset() {
+    
+    if (count < 0) {
+        alert("⚠️ Counter is below 0!");
+    }
+};
+
+
+const reset = () => {
     count = 0;
     updateCounter();
     console.log("Counter reset");
+};
 
-}
 
-function updateCounter() {
-    document.getElementById('count').innerHTML = count;
-}
-
-document.getElementById('greetBtn').addEventListener("click", function() {
-    const name = document.getElementById("name").value
-    if(name == "") {
+document.getElementById('greetBtn').addEventListener("click", () => {
+    const name = document.getElementById("name").value.trim();
+    if (name === "") {
         alert("Please enter your name");
     } else {
-        document.getElementById("welcome").innerHTML = "Welcome, " + name;
+        document.getElementById("welcome").textContent = "Welcome, " + name;
     }
-})
+});
+
+
+document.getElementById("incrbutton").addEventListener("click", increase);
+document.getElementById("descbutton").addEventListener("click", decrease);
+document.getElementById("resetBtn").addEventListener("click", reset);
+
+
+document.getElementById("toggleTheme").addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    console.log("Theme toggled");
+});

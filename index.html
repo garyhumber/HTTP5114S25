@@ -2,25 +2,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Buggy Counter App</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>Buggy Counter App</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header>
     <h1>Simple Counter App</h1>
-    <p id="welcome">Welcome user</p>
-    <p>Hello</p>
-    <input type="text" id="name" placeholder="Enter your name">
-    <button id="greetBtn">Greet</button>
+    <button id="toggleTheme" aria-label="Toggle Dark Mode">Toggle Dark Mode</button>
+  </header>
 
-    <div class="counter">
-        <h2>Counter: <span id="count">0</span></h2>
-        <button id="incrbutton" onclick="increase()">Increase</button>
-        <button id="descbutton" onclick="decrease()">Decrease</button>
-        <button onclick="reset()">Reset</button>
-    </div>
+  <main>
+    <!-- Greet Section -->
+    <section>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" aria-label="User Name" />
+      <button id="greetBtn" aria-label="Greet user">Greet</button>
+      <p id="welcome">Welcome, user!</p>
+    </section>
+
+    <!-- Counter Section -->
+    <section class="counter">
+      <h2>Counter: <span id="count">0</span></h2>
+
+      <label for="step">Step Value:</label>
+      <input type="number" id="step" value="1" min="1" aria-label="Step size" />
+
+      <div class="buttons">
+        <button id="incrbutton" aria-label="Increase counter">Increase</button>
+        <button id="descbutton" aria-label="Decrease counter">Decrease</button>
+        <button id="resetBtn" aria-label="Reset counter">Reset</button>
+      </div>
+    </section>
 
     <p>Check the console for logs</p>
-    <script src="script.js"></script>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 YourName. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
